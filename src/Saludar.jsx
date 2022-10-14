@@ -21,18 +21,19 @@ export function Saludar({ title, user = "default" }) {
     <p>{user.secondName}</p>
     </div>*/
 
-    console.log(title)
+  console.log(title);
 
   return (
     /*<>
       <h3>{add(20, 10)}</h3>
     </>*/
     <>
-      <h2>Componente {title} </h2><h3>usuario: {user}</h3>
+      <h2>Componente {title} </h2>
+      <h3>usuario: {user}</h3>
     </>
   );
 }
 
 export function UserPlayer() {
-    return <h2>Soy un Jugar pro</h2>
+  return <h2>Soy un Jugar pro</h2>;
 }
