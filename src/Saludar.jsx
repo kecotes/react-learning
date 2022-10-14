@@ -34,6 +34,29 @@ export function Saludar({ title, user = "default" }) {
   );
 }
 
-export function UserPlayer() {
-  return <h2>Soy un Jugar pro</h2>;
+export function UserPlayer({name,power,alive,objects,count,greet}) {
+  /* return <div>
+    <h2>{props.name}</h2>
+    <h3>Vida: {props.power}</h3>
+    <p>Está vivo? {props.alive ? 'alive': 'Dead'}</p>
+    <p>Equipaje: 
+      <ul>
+        <li>Weapon: {props.objects.weapon}</li>
+        <li>Amor: {props.objects.armor}</li>
+      </ul>
+    </p>
+  </div> */
+
+  return <div>
+    <h2>{name}</h2>
+    <h3>Vida: {power}</h3>
+    <p>Está vivo? {alive ? 'alive': 'Dead'}</p>
+    <p>function {greet()}</p>
+    <p>Equipaje: 
+      <ul>
+        <li>Weapon: {objects.weapon}</li>
+        <li>Amor: {objects.armor}</li>
+      </ul>
+    </p>
+  </div>
 }
