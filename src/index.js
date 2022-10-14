@@ -1,17 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Saludar, UserPlayer } from "./Saludar";
+import Product,{Navbar} from "./Product";
+//const rootElement = document.getElementById('root')
+//reactDOM.createRoot(rootElement);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// Seleccionamos mediante el doom el div con id="root" y se lo pasamos al metodo createRoot. Esto lo guardamos en una constante root.
+// root recibe es una aplicación inicial de react (El elemento root)
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+/*
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+<div>
+    { Saludar() }
+    { Saludar() }
+    { Saludar() }
+</div>
+)
+En ves de renderizar la funcion con llaves la podemos llamar como una etiqueta hmtl */
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+root.render(
+  <>
+    <Saludar title="holi" user="juancho" />
+    <Saludar title="holi React" />
+    <Saludar title="hola JSX" />
+    {/* <Saludar proxy={3322}/> */}
+  </>
+);
